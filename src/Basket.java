@@ -6,8 +6,7 @@ public class Basket {
     private int limit;
     private double totalWeight = 0;
     /**Добавьте две статические переменные для хранения общей стоимости и общего
-    количества всех товаров во всех корзинах.
-     */
+    количества всех товаров во всех корзинах.*/
     public static int countProduct = 0;
     public static int totalPriceProduct = 0;
 
@@ -31,6 +30,12 @@ public class Basket {
     public static int getCount() {
         return count;
     }
+
+    /**Реализуйте статические методы, которые будут увеличивать значения этих переменных
+    при добавлении в корзину новых товаров.*/
+    //public static void increaseCountProduct(int count) {
+    //    Basket.countProduct = Basket.countProduct + count;
+    //}
 
     public static void increaseCount(int count) {
         Basket.count = Basket.count + count;

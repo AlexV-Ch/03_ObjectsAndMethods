@@ -5,6 +5,11 @@ public class Basket {
     private int totalPrice = 0;
     private int limit;
     private double totalWeight = 0;
+    /**Добавьте две статические переменные для хранения общей стоимости и общего
+    количества всех товаров во всех корзинах.
+     */
+    public static int countProduct = 0;
+    public static int totalPriceProduct = 0;
 
     public Basket() {
         increaseCount(1);

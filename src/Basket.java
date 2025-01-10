@@ -33,9 +33,21 @@ public class Basket {
 
     /**Реализуйте статические методы, которые будут увеличивать значения этих переменных
     при добавлении в корзину новых товаров.*/
-    //public static void increaseCountProduct(int count) {
-    //    Basket.countProduct = Basket.countProduct + count;
-    //}
+    public static void increaseCountProduct(int count) {
+        Basket.countProduct = Basket.countProduct + count;
+    }
+
+    public static int getCountProduct() {
+        return countProduct;
+    }
+
+    public static void increaseTotalPriceProduct(int price) {
+        Basket.totalPriceProduct = Basket.totalPriceProduct + price;
+    }
+
+    public static int getTotalPriceProduct() {
+        return totalPriceProduct;
+    }
 
     public static void increaseCount(int count) {
         Basket.count = Basket.count + count;
@@ -44,11 +56,13 @@ public class Basket {
     public void add(String name, int price)
     {
         add(name, price, 1, 0);
+
     }
 
     public void add(String name, int price, int count)
     {
         add(name, price, count, 0);
+
     }
 
     public void add(String name, int price, int count, double weight) {
@@ -70,6 +84,8 @@ public class Basket {
             count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
         totalWeight = totalWeight + count * weight;
+        increaseCountProduct(count);
+        increaseTotalPriceProduct(price);
     }
 
     public void clear() {
@@ -77,6 +93,7 @@ public class Basket {
         totalPrice = 0;
         totalWeight = 0;
     }
+
 
     public int getTotalPrice() {
         return totalPrice;
@@ -96,6 +113,7 @@ public class Basket {
             System.out.println(items);
             System.out.println("Общий вес корзины : " + getTotalWeight() + " кг.");
             System.out.println();
+            System.out.println("Общее кол-во товаров: " + getCountProduct() + "шт. на сумму " + getTotalPriceProduct() + " руб.");
         }
     }
 }

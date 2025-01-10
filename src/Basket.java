@@ -127,9 +127,9 @@ public class Basket {
         } else {
             System.out.println(items);
             System.out.println("Общий вес корзины : " + getTotalWeight() + " кг.");
-            System.out.println("Общее кол-во товаров: " + getCountProduct() + " шт. на сумму " + getTotalPriceProduct() + " руб.");
-            System.out.println("Средняя стоимость одного товара " + getAveragePriceProduct() + " руб.");
-            System.out.println("Средняя стоимость корзины " + getAverageCostBasket() + " руб.");
+          // System.out.println("Общее кол-во товаров: " + getCountProduct() + " шт. на сумму " + getTotalPriceProduct() + " руб.");
+          // System.out.println("Средняя стоимость одного товара " + getAveragePriceProduct() + " руб.");
+          // System.out.println("Средняя стоимость корзины " + getAverageCostBasket() + " руб.");
             System.out.println();
         }
     }

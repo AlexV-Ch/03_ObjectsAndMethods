@@ -12,6 +12,8 @@ public class Main {
         basket_2.add("Хлеб", 30, 3);
         basket_2.print("Молоко ");
 
+        System.out.println("Общее кол-во корзин " + Basket.getCount() + " шт.");
+        System.out.println("Общее кол-во товаров: " + Basket.getCountProduct() + " шт. на сумму " + Basket.getTotalPriceProduct() + " руб.");
         System.out.println("Средняя стоимость одного товара " + Basket.getAveragePriceProduct() + " руб.");
         System.out.println("Средняя стоимость корзины " + Basket.getAverageCostBasket() + " руб.");
 

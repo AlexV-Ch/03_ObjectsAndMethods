@@ -10,5 +10,10 @@ public class Main {
         Basket basket_2 = new Basket();
         basket_2.add("Молоко", 70, 5);
         basket_2.print("Молоко");
+
+        System.out.println("Средняя стоимость одного товара " + Basket.getAveragePriceProduct() + " руб.");
+        System.out.println("Средняя стоимость корзины " + Basket.getAverageCostBasket() + " руб.");
+
+
      }
 }

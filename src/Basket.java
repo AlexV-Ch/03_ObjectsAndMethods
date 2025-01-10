@@ -49,6 +49,20 @@ public class Basket {
         return totalPriceProduct;
     }
 
+    /**Реализуйте статический метод расчёта средней цены товара во всех корзинах.
+       Он должен рассчитывать и возвращать отношение общей стоимости всех корзин
+       к общему количеству всех товаров.*/
+    public static double getAveragePriceProduct() {
+        return totalPriceProduct / countProduct;
+    }
+
+    /**Реализуйте статический метод расчёта средней стоимости корзины
+      (отношение общей стоимости всех корзин к количеству корзин)*/
+    public static double getAverageCostBasket() {
+        return totalPriceProduct / count;
+    }
+
+
     public static void increaseCount(int count) {
         Basket.count = Basket.count + count;
     }
@@ -85,7 +99,7 @@ public class Basket {
         totalPrice = totalPrice + count * price;
         totalWeight = totalWeight + count * weight;
         increaseCountProduct(count);
-        increaseTotalPriceProduct(price);
+        increaseTotalPriceProduct(price * count);
     }
 
     public void clear() {
@@ -99,7 +113,8 @@ public class Basket {
         return totalPrice;
     }
 
-    public double getTotalWeight() { return totalWeight;}
+    public double getTotalWeight() {
+        return totalWeight;}
 
     public boolean contains(String name) {
         return items.contains(name);
@@ -112,8 +127,13 @@ public class Basket {
         } else {
             System.out.println(items);
             System.out.println("Общий вес корзины : " + getTotalWeight() + " кг.");
+            System.out.println("Общее кол-во товаров: " + getCountProduct() + " шт. на сумму " + getTotalPriceProduct() + " руб.");
+            System.out.println("Средняя стоимость одного товара " + getAveragePriceProduct() + " руб.");
+            System.out.println("Средняя стоимость корзины " + getAverageCostBasket() + " руб.");
             System.out.println();
-            System.out.println("Общее кол-во товаров: " + getCountProduct() + "шт. на сумму " + getTotalPriceProduct() + " руб.");
         }
     }
+
+
+
 }

@@ -7,8 +7,8 @@ public class Basket {
     private double totalWeight = 0;
     /**Добавьте две статические переменные для хранения общей стоимости и общего
     количества всех товаров во всех корзинах.*/
-    public static int countProduct = 0;
-    public static int totalPriceProduct = 0;
+    private static int countProduct = 0;
+    private static int totalPriceProduct = 0;
 
     public Basket() {
         increaseCount(1);
@@ -33,7 +33,7 @@ public class Basket {
 
     /**Реализуйте статические методы, которые будут увеличивать значения этих переменных
     при добавлении в корзину новых товаров.*/
-    public static void increaseCountProduct(int count) {
+    private static void increaseCountProduct(int count) {
         Basket.countProduct = Basket.countProduct + count;
     }
 
@@ -41,7 +41,7 @@ public class Basket {
         return countProduct;
     }
 
-    public static void increaseTotalPriceProduct(int price) {
+    private static void increaseTotalPriceProduct(int price) {
         Basket.totalPriceProduct = Basket.totalPriceProduct + price;
     }
 
@@ -126,7 +126,7 @@ public class Basket {
             System.out.println("Корзина пуста");
         } else {
             System.out.println(items);
-            System.out.println("Общий вес корзины : " + getTotalWeight() + " кг.");
+            System.out.println("Общий вес корзины: " + getTotalWeight() + " кг.");
           // System.out.println("Общее кол-во товаров: " + getCountProduct() + " шт. на сумму " + getTotalPriceProduct() + " руб.");
           // System.out.println("Средняя стоимость одного товара " + getAveragePriceProduct() + " руб.");
           // System.out.println("Средняя стоимость корзины " + getAverageCostBasket() + " руб.");
